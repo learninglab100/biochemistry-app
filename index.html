@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>آزمون‌یار جامع بیوشیمی بالینی و علوم پایه</title>
+  <title>آزمون‌یار جامع بیوشیمی | Learning Lab Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
   <style>
@@ -35,41 +35,86 @@
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 min-h-screen flex flex-col">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-30 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3 cursor-pointer" onclick="app.goHome()">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 text-white flex items-center justify-center font-bold text-lg shadow-md">
+  <!-- Login / Activation Gate (Learning Lab Academy) -->
+  <div id="auth-gate" class="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl space-y-6">
+      <div class="text-center space-y-2">
+        <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-teal-600 to-emerald-500 text-white flex items-center justify-center text-3xl shadow-lg">
           🧬
         </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">Learning Lab Academy</h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">سامانه جامع درسنامه و بانک تست بیوشیمی بالینی</p>
+      </div>
+
+      <div class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-600 dark:text-slate-400">شناسه اختصاصی دستگاه شما:</span>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-300 font-medium">قفل تک‌کاربره</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <input id="device-id-display" type="text" readonly dir="ltr" class="w-full px-3 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 font-mono text-sm font-bold text-center text-teal-700 dark:text-teal-400 select-all focus:outline-none" />
+          <button onclick="llaAuth.copyDeviceId()" id="copy-id-btn" class="shrink-0 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 text-white text-xs font-bold transition">
+            کپی شناسه
+          </button>
+        </div>
+        <p class="text-[11px] leading-5 text-slate-500 dark:text-slate-400">
+          برای دریافت کد فعال‌سازی، شناسه دستگاه بالا را کپی کرده و برای پشتیبانی <strong>Learning Lab Academy</strong> ارسال نمایید.
+        </p>
+      </div>
+
+      <form onsubmit="llaAuth.verify(event)" class="space-y-4">
         <div>
-          <h1 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">بانک جامع بیوشیمی</h1>
-          <p class="text-xs text-slate-500 dark:text-slate-400">درسنامه طبقه‌بندی‌شده + آزمون‌های تشریحی</p>
+          <label for="activation-code" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">کد فعال‌سازی (رمز ورود):</label>
+          <input id="activation-code" type="number" inputmode="numeric" required placeholder="کد دریافتی را وارد کنید..." dir="ltr" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-center font-mono text-base font-bold tracking-widest focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none" />
+        </div>
+        <p id="auth-error" class="hidden text-xs font-bold text-rose-600 dark:text-rose-400 text-center bg-rose-50 dark:bg-rose-950/40 py-2 rounded-lg border border-rose-200 dark:border-rose-900">
+          کد فعال‌سازی نامعتبر است! لطفاً شناسه دستگاه را مجدداً بررسی کنید.
+        </p>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold text-sm shadow-lg shadow-teal-600/20 transition">
+          تأیید و ورود به اپلیکیشن
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main App Wrapper (Hidden until unlocked) -->
+  <div id="protected-app-wrapper" class="hidden flex-1 flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-30 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-3 cursor-pointer" onclick="app.goHome()">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 text-white flex items-center justify-center font-bold text-lg shadow-md">
+            🧬
+          </div>
+          <div>
+            <h1 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">بانک جامع بیوشیمی</h1>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Learning Lab Academy</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button onclick="app.openBookmarks()" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-800 flex items-center gap-1.5">
+            <span>★</span>
+            <span class="hidden sm:inline">نشان‌شده‌ها</span>
+            <span id="bookmark-count" class="bg-amber-200 dark:bg-amber-800 px-1.5 py-0.5 rounded-full text-xs">0</span>
+          </button>
+          <button onclick="app.openWrongBank()" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 dark:bg-rose-950/50 dark:text-rose-300 dark:border-rose-800 flex items-center gap-1.5">
+            <span>✕</span>
+            <span class="hidden sm:inline">مرور غلط‌ها</span>
+            <span id="wrong-count" class="bg-rose-200 dark:bg-rose-800 px-1.5 py-0.5 rounded-full text-xs">0</span>
+          </button>
+          <button onclick="app.toggleTheme()" title="تغییر تم" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+            🌓
+          </button>
         </div>
       </div>
+    </header>
 
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button onclick="app.openBookmarks()" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-800 flex items-center gap-1.5">
-          <span>★</span>
-          <span class="hidden sm:inline">نشان‌شده‌ها</span>
-          <span id="bookmark-count" class="bg-amber-200 dark:bg-amber-800 px-1.5 py-0.5 rounded-full text-xs">0</span>
-        </button>
-        <button onclick="app.openWrongBank()" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 dark:bg-rose-950/50 dark:text-rose-300 dark:border-rose-800 flex items-center gap-1.5">
-          <span>✕</span>
-          <span class="hidden sm:inline">مرور غلط‌ها</span>
-          <span id="wrong-count" class="bg-rose-200 dark:bg-rose-800 px-1.5 py-0.5 rounded-full text-xs">0</span>
-        </button>
-        <button onclick="app.toggleTheme()" title="تغییر تم" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
-          🌓
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main id="app-root" class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
-    <!-- Dynamic Views Render Here -->
-  </main>
+    <!-- Main Content -->
+    <main id="app-root" class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
+      <!-- Dynamic Views Render Here -->
+    </main>
+  </div>
 
   <!-- Lesson Row Reference Modal (Drawer/Popup) -->
   <div id="lesson-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
@@ -89,6 +134,79 @@
     </div>
   </div>
 
+  <!-- Authentication & Device ID Controller -->
+  <script>
+    const llaAuth = {
+      STORAGE_DEVICE_KEY: 'lla_biochem_device_id',
+      STORAGE_UNLOCK_KEY: 'lla_biochem_unlocked_token',
+
+      getOrCreateDeviceId() {
+        let devId = localStorage.getItem(this.STORAGE_DEVICE_KEY);
+        if (!devId || !/^LLA-\d{8}$/.test(devId)) {
+          const rand8 = Math.floor(10000000 + Math.random() * 90000000);
+          devId = 'LLA-' + rand8;
+          localStorage.setItem(this.STORAGE_DEVICE_KEY, devId);
+        }
+        return devId;
+      },
+
+      computeExpectedCode(devId) {
+        const last4 = parseInt(devId.slice(-4), 10);
+        return (last4 * 7) + 7;
+      },
+
+      init() {
+        const devId = this.getOrCreateDeviceId();
+        document.getElementById('device-id-display').value = devId;
+        const expected = String(this.computeExpectedCode(devId));
+        const savedToken = localStorage.getItem(this.STORAGE_UNLOCK_KEY);
+        if (savedToken === expected) {
+          this.unlock();
+        }
+      },
+
+      copyDeviceId() {
+        const input = document.getElementById('device-id-display');
+        navigator.clipboard.writeText(input.value).then(() => {
+          const btn = document.getElementById('copy-id-btn');
+          const orig = btn.textContent;
+          btn.textContent = 'کپی شد ✓';
+          btn.classList.add('bg-teal-600');
+          setTimeout(() => {
+            btn.textContent = orig;
+            btn.classList.remove('bg-teal-600');
+          }, 2000);
+        }).catch(() => {
+          input.select();
+          document.execCommand('copy');
+        });
+      },
+
+      verify(e) {
+        e.preventDefault();
+        const devId = this.getOrCreateDeviceId();
+        const expected = this.computeExpectedCode(devId);
+        const entered = parseInt(document.getElementById('activation-code').value.trim(), 10);
+        const errEl = document.getElementById('auth-error');
+
+        if (entered === expected) {
+          localStorage.setItem(this.STORAGE_UNLOCK_KEY, String(expected));
+          errEl.classList.add('hidden');
+          this.unlock();
+        } else {
+          errEl.classList.remove('hidden');
+        }
+      },
+
+      unlock() {
+        document.getElementById('auth-gate').classList.add('hidden');
+        document.getElementById('protected-app-wrapper').classList.remove('hidden');
+      }
+    };
+
+    llaAuth.init();
+  </script>
+
   <!-- Embedded Chapter Manifest (Zero 404 Guarantee) -->
   <script>
     window.BIOCHEM_DB = window.BIOCHEM_DB || {};
@@ -103,24 +221,24 @@
       { id: 8, title: "فصل ۸: لیپیدها - ساختار و متابولیسم", subtopics: ["اسیدهای چرب و نام‌گذاری امگا و دلتا", "بتااکسیداسیون و بیوسنتز اسیدهای چرب", "متابولیسم کتون‌بادی‌ها", "فسفولیپیدها", "اسفنگولیپیدها و بیماری‌های ذخیره‌ای", "مسیر سنتز ایکوزانوئیدها و اثر داروها", "متابولیسم کلسترول و استاتین‌ها", "لیپوپروتئین‌ها و آپولیپوپروتئین‌ها"] },
       { id: 9, title: "فصل ۹: نوکلئوتیدها و اسیدهای نوکلئیک", subtopics: ["ساختار بازها، نوکلئوزیدها و نوکلئوتیدها", "متابولیسم پورین‌ها و پیریمیدین‌ها"] },
       { id: 10, title: "فصل ۱۰: مباحث ژنتیکی و بیولوژی مولکولی", subtopics: ["همانندسازی DNA و نقش آنزیم‌ها", "رونویسی، ترجمه و پردازش RNA", "بیوسنتز پروتئین و مهارکننده‌ها", "جهش، آسیب و ترمیم DNA"] },
-      { id: 11, title: "فصل ۱۱: هورمون‌شناسی", subtopics: ["کلیات هورمون‌ها، هیپوفیز، تیروئید، کورتیکوئیدها، انسولین و گلوکاگون"] },
-      { id: 12, title: "فصل ۱۲: ویتامین‌ها، کوآنزیم‌ها و مواد معدنی", subtopics: ["ویتامین‌های محلول در آب و چربی و املاح ضروری"] }
+      { id: 11, title: "فصل ۱۱: هورمون‌شناسی", subtopics: ["کلیات هورمون‌ها و مسیرهای پیام‌رسانی", "هورمون‌های هیپوتالاموسی و هیپوفیزی", "هورمون‌های کورتیکوئیدی و غده آدرنال", "هورمون‌های تیروئیدی", "هورمون‌های تنظیم‌کننده کلسیم", "انسولین، گلوکاگون و هورمون‌های گوارشی"] },
+      { id: 12, title: "فصل ۱۲: ویتامین‌ها، کوآنزیم‌ها و مواد معدنی", subtopics: ["ویتامین‌های محلول در آب و چربی و کوآنزیم‌ها", "مواد معدنی و عناصر کمیاب"] }
     ];
   </script>
 
-  <!-- Chapter Modules (Cache-Busted) -->
-  <script src="./ch1.js?v=2"></script>
-  <script src="./ch2.js?v=2"></script>
-  <script src="./ch3.js?v=2"></script>
-  <script src="./ch4.js?v=2"></script>
-  <script src="./ch5.js?v=2"></script>
-  <script src="./ch6.js?v=2"></script>
-  <script src="./ch7.js?v=2"></script>
-  <script src="./ch8.js?v=2"></script>
-  <script src="./ch9.js?v=2"></script>
-  <script src="./ch10.js?v=2"></script>
-  <script src="./ch11.js?v=2"></script>
-  <script src="./ch12.js?v=2"></script>
-  <script src="./app.js?v=2"></script>
+  <!-- Chapter Modules (Cache-Busted v4) -->
+  <script src="./ch1.js?v=4"></script>
+  <script src="./ch2.js?v=4"></script>
+  <script src="./ch3.js?v=4"></script>
+  <script src="./ch4.js?v=4"></script>
+  <script src="./ch5.js?v=4"></script>
+  <script src="./ch6.js?v=4"></script>
+  <script src="./ch7.js?v=4"></script>
+  <script src="./ch8.js?v=4"></script>
+  <script src="./ch9.js?v=4"></script>
+  <script src="./ch10.js?v=4"></script>
+  <script src="./ch11.js?v=4"></script>
+  <script src="./ch12.js?v=4"></script>
+  <script src="./app.js?v=4"></script>
 </body>
 </html>
