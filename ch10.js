@@ -7,53 +7,58 @@ window.BIOCHEM_DB[10] = {
       "rows": [
         {
           "row": 1,
-          "title": "مقدمه همانندسازی DNA",
-          "html": "<p>همانندسازی DNA در <strong>فاز S</strong> چرخه سلولی انجام می‌شود و به صورت <strong>نیمه‌حفاظتی (Semiconservative)</strong> است؛ یعنی هر رشته مادر به عنوان قالب برای ساخت رشته مکمل جدید استفاده می‌شود.</p>"
+          "title": "مقدمه همانندسازی DNA (نیمه‌حفاظتی و فاز S)",
+          "html": "<p>همانندسازی DNA در <strong>فاز S</strong> چرخه سلولی انجام می‌شود و به صورت <strong>نیمه‌حفاظتی (Semiconservative)</strong> است؛ یعنی هر رشته مادر به عنوان قالب برای ساخت رشته مکمل جدید استفاده می‌شود. جهت سنتز همواره از <strong>'5 به '3</strong> است.</p>"
         },
         {
           "row": 2,
-          "title": "ساختار DNA و پیچیدگی‌های آن",
-          "html": "<p>فرم غالب DNA در سلول <strong>B-DNA</strong> است (راستگرد، دارای شیار بزرگ و کوچک و حدود ۱۰ تا ۱۰/۵ جفت باز در هر دور). باز شدن مارپیچ دو رشته‌ای باعث ایجاد ابرفنر یا <strong>سوپرکویل (Supercoil)</strong> مثبت در جلوی چنگال همانندسازی می‌شود.</p>"
+          "title": "ساختار DNA و پیچیدگی‌های ابرفنری (Supercoiling)",
+          "html": "<p>فرم غالب DNA در سلول <strong>B-DNA</strong> است (راستگرد، دارای شیار بزرگ و کوچک و حدود ۱۰ تا ۱۰/۵ جفت باز در هر دور). باز شدن مارپیچ دورشته‌ای باعث ایجاد ابرفنر مثبت در جلوی چنگال همانندسازی می‌شود.</p>"
         },
         {
           "row": 3,
           "title": "تبدیل ریبونوکلئوتیدها به دئوکسی‌ریبونوکلئوتیدها (RNR)",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>آنزیم:</strong> <strong>ریبونوکلئوتید ردوکتاز (RNR)</strong> با حذف گروه OH از کربن ۲ قند ریبوز، دی‌فسفات‌های ریبونوکلئوتید (ADP, GDP, CDP, UDP) را به dNDP تبدیل می‌کند.</li><li><strong>دهنده مستقیم الکترون:</strong> <strong>تیوردوکسین احیاشده</strong> (یا گلوتاردوکسین) که خود مجدداً توسط <strong>NADPH</strong> احیا می‌شود.</li><li><strong>تنظیم:</strong> ATP فعال‌کننده کلی و dATP مهارکننده کلی آنزیم است.</li></ul>"
+          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>آنزیم:</strong> <strong>ریبونوکلئوتید ردوکتاز (RNR)</strong> با حذف گروه OH از کربن ۲ قند ریبوز، دی‌فسفات‌های ریبونوکلئوتید (ADP, GDP, CDP, UDP) را به dNDP تبدیل می‌کند.</li><li><strong>دهنده مستقیم الکترون:</strong> <strong>تیوردوکسین احیاشده</strong> که خود مجدداً توسط <strong>NADPH</strong> احیا می‌شود.</li></ul>"
         },
         {
           "row": 4,
-          "title": "توپوایزومرازها و تنظیم ابرفنر DNA",
+          "title": "توپوایزومرازها و آنتی‌بیوتیک‌های مهارکننده",
           "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>توپوایزومراز I:</strong> ایجاد برش موقت <strong>تک‌رشته‌ای</strong> و رفع سوپرکویل <strong>بدون نیاز به ATP</strong>.</li><li><strong>توپوایزومراز II:</strong> ایجاد برش <strong>دورشته‌ای</strong> با مصرف <strong>ATP</strong>؛ نمونه باکتریایی آن <strong>DNA ژیراز</strong> است.</li><li><strong>داروهای مهارکننده:</strong> آنتی‌بیوتیک‌های فلوروکینولون مانند <strong>سیپروفلوکساسین</strong> و <strong>نالیدیکسیک اسید</strong> DNA ژیراز باکتری را مهار می‌کنند.</li></ul>"
         },
         {
           "row": 5,
-          "title": "شروع همانندسازی (مبدأ oriC)",
-          "html": "<p>در پروکاریوت‌ها یک نقطه شروع به نام <strong>oriC</strong> (شناسایی توسط پروتئین <strong>DnaA</strong>) و در یوکاریوت‌ها چندین نقطه شروع همانندسازی وجود دارد.</p>"
+          "title": "شروع همانندسازی (مبدأ oriC و DnaA)",
+          "html": "<p>در پروکاریوت‌ها یک نقطه شروع به نام <strong>oriC</strong> غنی از A-T (شناسایی توسط پروتئین <strong>DnaA</strong>) و در یوکاریوت‌ها چندین نقطه شروع همانندسازی وجود دارد.</p>"
         },
         {
           "row": 6,
-          "title": "سنتز پرایمر RNA",
-          "html": "<p>آنزیم <strong>پریماز (DnaG)</strong> یک <strong>RNA پلیمراز</strong> تخصصی است که قطعه کوتاه پرایمر RNA (۱۰ تا ۲۰ نوکلئوتید) را می‌سازد تا DNA پلیمراز بتواند سنتز را آغاز کند. در یوکاریوت‌ها این نقش بر عهده زیرواحد پریمازی <strong>DNA پلیمراز آلفا</strong> است.</p>"
+          "title": "سنتز پرایمر RNA (پریماز)",
+          "html": "<p>آنزیم <strong>پریماز (DnaG)</strong> یک <strong>RNA پلیمراز</strong> تخصصی است که قطعه کوتاه پرایمر RNA می‌سازد تا DNA پلیمراز بتواند سنتز را آغاز کند. در یوکاریوت‌ها این نقش بر عهده زیرواحد پریمازی <strong>DNA پلیمراز آلفا</strong> است.</p>"
         },
         {
           "row": 7,
           "title": "انواع DNA پلیمرازها در پروکاریوت و یوکاریوت",
-          "html": "\n            <table class=\"w-full text-xs sm:text-sm border-collapse border border-slate-200 dark:border-slate-700\">\n              <thead><tr class=\"bg-slate-100 dark:bg-slate-800\"><th class=\"border p-2\">آنزیم</th><th class=\"border p-2\">موجود در</th><th class=\"border p-2\">عملکرد اصلی</th><th class=\"border p-2\">نکته کلیدی</th></tr></thead>\n              <tbody>\n                <tr><td class=\"border p-2 font-bold\">DNA پلیمراز III</td><td class=\"border p-2\">پروکاریوت</td><td class=\"border p-2\">سنتز رشته اصلی و پیرو</td><td class=\"border p-2\">اصلی‌ترین آنزیم؛ دارای تصحیح '3→'5</td></tr>\n                <tr><td class=\"border p-2 font-bold\">DNA پلیمراز I</td><td class=\"border p-2\">پروکاریوت</td><td class=\"border p-2\">حذف پرایمر RNA و پر کردن شکاف</td><td class=\"border p-2\">دارای هر دو اگزونوکلئاز '5→'3 و '3→'5</td></tr>\n                <tr><td class=\"border p-2 font-bold\">DNA پلیمراز آلفا</td><td class=\"border p-2\">یوکاریوت</td><td class=\"border p-2\">سنتز پرایمر RNA و شروع همانندسازی</td><td class=\"border p-2\">دارای فعالیت پریمازی</td></tr>\n                <tr><td class=\"border p-2 font-bold\">DNA پلیمراز دلتا و اپسیلون</td><td class=\"border p-2\">یوکاریوت</td><td class=\"border p-2\">سنتز اصلی DNA هسته‌ای</td><td class=\"border p-2\">دارای فعالیت تصحیح '3→'5</td></tr>\n                <tr><td class=\"border p-2 font-bold\">DNA پلیمراز گاما</td><td class=\"border p-2\">یوکاریوت</td><td class=\"border p-2\">سنتز DNA میتوکندری</td><td class=\"border p-2\">اختصاصی میتوکندری</td></tr>\n              </tbody>\n            </table>\n          "
+          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>DNA پلیمراز III (پروکاریوت):</strong> آنزیم اصلی سنتز رشته پیشرو و پیرو (دارای تصحیح '3→'5).</li><li><strong>DNA پلیمراز I (پروکاریوت):</strong> حذف پرایمر RNA با فعالیت اگزونوکلئازی '5→'3 و پر کردن شکاف با DNA.</li><li><strong>DNA پلیمراز آلفا (یوکاریوت):</strong> سنتز پرایمر RNA و شروع همانندسازی.</li><li><strong>DNA پلیمراز دلتا و اپسیلون (یوکاریوت):</strong> سنتز اصلی DNA هسته‌ای با فعالیت Proofreading.</li><li><strong>DNA پلیمراز گاما (یوکاریوت):</strong> اختصاصی <strong>میتوکندری</strong>.</li></ul>"
         },
         {
           "row": 8,
-          "title": "سایر پروتئین‌های چنگال همانندسازی",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>هلیکاز (DnaB):</strong> باز کردن مارپیچ دورشته‌ای DNA با مصرف ATP.</li><li><strong>پروتئین‌های SSB (پروکاریوت) و RPA (یوکاریوت):</strong> اتصال به DNA تک‌رشته‌ای برای پایدارسازی و جلوگیری از جفت شدن مجدد بازها.</li><li><strong>DNA لیگاز:</strong> اتصال قطعات اوکازاکی با تشکیل پیوند فسفودی‌استر.</li><li><strong>RNase H:</strong> حذف پرایمرهای RNA در یوکاریوت‌ها.</li></ul>"
+          "title": "سایر پروتئین‌های چنگال همانندسازی (هلیکاز، SSB، لیگاز)",
+          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>هلیکاز (DnaB):</strong> باز کردن مارپیچ دورشته‌ای DNA با مصرف ATP.</li><li><strong>پروتئین‌های SSB (پروکاریوت) و RPA (یوکاریوت):</strong> اتصال به DNA تک‌رشته‌ای برای پایدارسازی و جلوگیری از جفت شدن مجدد بازها.</li><li><strong>DNA لیگاز:</strong> اتصال قطعات اوکازاکی با تشکیل پیوند فسفودی‌استر.</li></ul>"
         },
         {
           "row": 9,
           "title": "تلومراز (Telomerase)",
-          "html": "<p>آنزیم ریبونوکلئوپروتئینی با فعالیت <strong>ترانس‌کریپتاز معکوس (DNA پلیمراز وابسته به RNA)</strong> که با استفاده از RNA الگوی درونی خود، توالی تلومر را به انتهای کروموزوم اضافه کرده و از کوتاه شدن آن جلوگیری می‌کند (فعال در سلول‌های بنیادی، جنینی و سرطانی؛ غایب در باکتری‌ها).</p>"
+          "html": "<p>آنزیم ریبونوکلئوپروتئینی با فعالیت <strong>ترانس‌کریپتاز معکوس (DNA پلیمراز وابسته به RNA)</strong> که با استفاده از RNA الگوی درونی خود، توالی تلومر را به انتهای کروموزوم اضافه کرده و از کوتاه شدن آن جلوگیری می‌کند.</p>"
+        },
+        {
+          "row": 10,
+          "title": "رشته پیشرو (Leading) و رشته پیرو (Lagging) و قطعات اوکازاکی",
+          "html": "<p><strong>رشته پیشرو:</strong> سنتز پیوسته به سمت چنگال همانندسازی (فقط یک پرایمر). <strong>رشته پیرو:</strong> سنتز ناپیوسته به صورت <strong>قطعات اوکازاکی</strong> در جهت دور از چنگال همانندسازی (نیازمند چندین پرایمر).</p>"
         },
         {
           "row": 11,
           "title": "جدول جامع مقایسه آنزیم‌های همانندسازی",
-          "html": "<p>تمام DNA پلیمرازها نیازمند پرایمر RNA و الگوی DNA هستند و جهت سنتز آن‌ها همواره <strong>'5 به '3</strong> است. RNA پلیمرازها و پریماز نیازی به پرایمر ندارند.</p>"
+          "html": "<p>تمام DNA پلیمرازها نیازمند پرایمر RNA و الگوی DNA هستند؛ RNA پلیمرازها و پریماز نیازی به پرایمر ندارند.</p>"
         }
       ],
       "questions": [
@@ -71,7 +76,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             3
           ],
-          "exp": "در واکنش تبدیل NDP به dNDP توسط ریبونوکلئوتید ردوکتاز، عامل احیاکننده مستقیم تیوردوکسین احیاشده است و NADPH به صورت غیرمستقیم تیوردوکسین اکسیدشده را احیا می‌کند."
+          "exp": "در واکنش تبدیل NDP به dNDP توسط ریبونوکلئوتید ردوکتاز، عامل احیاکننده مستقیم تیوردوکسین احیاشده است."
         },
         {
           "uid": "ch10_t1_q2",
@@ -145,13 +150,13 @@ window.BIOCHEM_DB[10] = {
       "rows": [
         {
           "row": 1,
-          "title": "رونویسی در پروکاریوت‌ها و مهارکننده آن",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>ریفامپیسین:</strong> آنتی‌بیوتیک مهارکننده زیرواحد <strong>بتا (β)</strong> در RNA پلیمراز باکتریایی و میتوکندریایی.</li><li><strong>زیرواحد سیگما (σ):</strong> شناسایی پروموتر و محل شروع رونویسی در پروکاریوت‌ها.</li><li><strong>فاکتور رو (ρ):</strong> عامل خاتمه رونویسی وابسته به ATP در پروکاریوت‌ها.</li></ul>"
+          "title": "رونویسی در پروکاریوت‌ها و مهارکننده آن (ریفامپیسین)",
+          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>ریفامپیسین:</strong> آنتی‌بیوتیک مهارکننده زیرواحد <strong>بتا (β)</strong> در RNA پلیمراز باکتریایی و میتوکندریایی.</li><li><strong>زیرواحد سیگما (σ):</strong> شناسایی پروموتر و محل شروع رونویسی در پروکاریوت‌ها.</li><li><strong>فاکتور رو (ρ):</strong> عامل خاتمه رونویسی وابسته به ATP.</li></ul>"
         },
         {
           "row": 2,
           "title": "فاکتورهای عمومی رونویسی (GTFs) و TATA Box",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>توالی TATA Box:</strong> در ۲۵ تا ۳۰ جفت باز قبل از نقطه شروع رونویسی در پروموتر یوکاریوت‌ها قرار دارد.</li><li><strong>TFIID:</strong> اولین فاکتور متصل‌شونده به پروموتر که حاوی زیرواحد <strong>TBP</strong> برای شناسایی و اتصال به <strong>TATA Box</strong> است.</li><li><strong>TFIIH:</strong> دارای فعالیت هلیکازی و کینازی برای فسفریلاسیون RNA پلیمراز II و شروع رونویسی.</li></ul>"
+          "html": "<p><strong>توالی TATA Box:</strong> در ۲۵ تا ۳۰ جفت باز قبل از نقطه شروع رونویسی قرار دارد. <strong>TFIID:</strong> اولین فاکتور متصل‌شونده به پروموتر که حاوی زیرواحد <strong>TBP</strong> برای شناسایی و اتصال به <strong>TATA Box</strong> است.</p>"
         },
         {
           "row": 3,
@@ -161,12 +166,27 @@ window.BIOCHEM_DB[10] = {
         {
           "row": 4,
           "title": "پردازش mRNA یوکاریوتی و متیلاسیون",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>کلاهک '۵ (5' Cap):</strong> اتصال <strong>۷-متیل گوانوزین تری‌فسفات</strong> به انتهای '۵ mRNA یوکاریوتی برای حفاظت از اگزونوکلئازها و شناسایی توسط ریبوزوم (eIF4E).</li><li><strong>دم پلی-A (Poly-A Tail):</strong> افزودن توالی آدنین به انتهای '۳ در یوکاریوت‌ها (فاقد کد در DNA؛ توسط پلی-A پلیمراز).</li><li><strong>Splicing:</strong> حذف اینترون‌ها و اتصال اگزون‌ها از hnRNA توسط کمپلکس اسپلایزیوزوم حاوی <strong>snRNA</strong>.</li><li><strong>متیلاسیون DNA:</strong> توسط <strong>SAM</strong> (مشتق متیونین) موجب خاموشی بیان ژن می‌شود.</li></ul>"
+          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>کلاهک '۵ (5' Cap):</strong> اتصال <strong>۷-متیل گوانوزین تری‌فسفات</strong> به انتهای '۵ mRNA یوکاریوتی.</li><li><strong>دم پلی-A (Poly-A Tail):</strong> افزودن توالی آدنین به انتهای '۳ در یوکاریوت‌ها (فاقد کد در DNA؛ توسط پلی-A پلیمراز).</li><li><strong>Splicing:</strong> حذف اینترون‌ها و اتصال اگزون‌ها از hnRNA توسط کمپلکس اسپلایزیوزوم حاوی <strong>snRNA</strong>.</li><li><strong>متیلاسیون DNA:</strong> توسط <strong>SAM</strong> (مشتق متیونین) موجب خاموشی بیان ژن می‌شود.</li></ul>"
+        },
+        {
+          "row": 5,
+          "title": "کدون‌ها و ضدکدون‌ها و رمز ژنتیکی",
+          "html": "<p>کد ژنتیکی سه‌حرفی، بدون همپوشانی، بدون ویرگول و <strong>تخریب‌شونده (Degenerate)</strong> است (چند کدون برای یک اسید آمینه به جز متیونین AUG و تریپتوفان UGG). جفت‌شدن کدون و آنتی‌کدون به صورت <strong>آنتی‌موازی</strong> است.</p>"
+        },
+        {
+          "row": 6,
+          "title": "آنزیم آمینواسیل-tRNA سنتتاز",
+          "html": "<p>اتصال اسید آمینه اختصاصی به انتهای '۳ (توالی CCA) مولکول tRNA مربوطه با مصرف <strong>۲ پیوند پرانرژی ATP</strong> (تبدیل ATP به AMP + PPi)؛ مسئول دقت بالای ترجمه.</p>"
         },
         {
           "row": 7,
           "title": "آنزیم‌های حذف پرایمر و اتصال قطعات اوکازاکی",
           "html": "<p>در باکتری‌ها برای حفظ قطعات اوکازاکی به صورت دست‌نخورده باید از فعالیت <strong>DNA پلیمراز I</strong> (حذف پرایمر) و <strong>DNA لیگاز</strong> (اتصال قطعات) جلوگیری کرد.</p>"
+        },
+        {
+          "row": 8,
+          "title": "عناصر تنظیمی ژن (Promoter, Enhancer, Silencer)",
+          "html": "<p><strong>پروموتر (TATA و CAAT Box):</strong> در بالادست ژن و وابسته به جهت. <strong>افزاینده‌ها (Enhancers):</strong> توالی‌های تنظیمی که در فاصله دور (بالادست، پایین‌دست یا داخل اینترون) و مستقل از جهت، رونویسی را تقویت می‌کنند.</p>"
         },
         {
           "row": 9,
@@ -205,7 +225,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             4
           ],
-          "exp": "متیونین با تبدیل شدن به S-آدنوزیل متیونین (SAM) دهنده اصلی گروه متیل در متیلاسیون DNA و تنظیم اپی‌ژنتیکی است."
+          "exp": "متیونین با تبدیل شدن به S-آدنوزیل متیونین (SAM) دهنده اصلی گروه متیل در متیلاسیون DNA است."
         },
         {
           "uid": "ch10_t2_q3",
@@ -237,7 +257,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             7
           ],
-          "exp": "تلومراز با استفاده از یک الگوی RNA درونی، توالی‌های تکراری DNA را سنتز می‌کند (DNA پلیمراز وابسته به RNA)."
+          "exp": "تلومراز با استفاده از یک الگوی RNA درونی، توالی‌های تکراری DNA را سنتز می‌کند."
         },
         {
           "uid": "ch10_t2_q5",
@@ -269,7 +289,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             9
           ],
-          "exp": "cAMP با اتصال به پروتئین CAP کمپلکسی تشکیل می‌دهد که به پروموتر اپرون لاکتوز متصل شده و رونویسی توسط RNA پلیمراز را تشدید می‌کند."
+          "exp": "cAMP با اتصال به پروتئین CAP کمپلکسی تشکیل می‌دهد که به پروموتر اپرون لاکتوز متصل شده و رونویسی را تشدید می‌کند."
         }
       ]
     },
@@ -279,27 +299,32 @@ window.BIOCHEM_DB[10] = {
         {
           "row": 1,
           "title": "کدون‌های ژنتیکی، موقعیت Wobble و سلنوسیستئین",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>کدون آغازین:</strong> <strong>AUG</strong> (کدکننده متیونین در یوکاریوت و فرمیل-متیونین در پروکاریوت).</li><li><strong>کدون‌های خاتمه (Stop):</strong> <strong>UAA, UAG, UGA</strong>.</li><li><strong>موقعیت Wobble:</strong> در باز اول انتهای '۵ آنتی‌کدون tRNA (مکمل باز سوم کدون mRNA) قرار دارد و اجازه می‌دهد یک tRNA چند کدون مترادف را بخواند.</li><li><strong>سلنوسیستئین (Sec):</strong> توسط tRNA مخصوص (tRNASec) از روی کدون <strong>UGA</strong> وارد پروتئین می‌شود.</li></ul>"
+          "html": "<p><strong>سلنوسیستئین (Sec):</strong> توسط tRNA مخصوص (tRNASec) از روی کدون <strong>UGA</strong> وارد پروتئین می‌شود. <strong>موقعیت Wobble:</strong> باز اول آنتی‌کدون tRNA (مکمل باز سوم کدون mRNA).</p>"
+        },
+        {
+          "row": 2,
+          "title": "فاکتورهای ترجمه (eIF4E, eIF3, EF-Tu, EF-G)",
+          "html": "<p><strong>eIF4E (یوکاریوت):</strong> اتصال ریبوزوم به کلاهک '۵ mRNA | <strong>eIF3 (یوکاریوت):</strong> جدا نگه داشتن زیرواحدهای ریبوزوم | <strong>EF-Tu / eEF1:</strong> وارد کردن آمینواسیل-tRNA به جایگاه A | <strong>EF-G / eEF2:</strong> جابه‌جایی (Translocation) ریبوزوم.</p>"
         },
         {
           "row": 3,
-          "title": "شروع ترجمه و اتصال به ریبوزوم",
-          "html": "<p><strong>پروکاریوت‌ها (ریبوزوم 70S):</strong> انتهای '۳ مولکول <strong>16S rRNA</strong> مکمل توالی <strong>Shine-Dalgarno</strong> در انتهای '۵ مولکول mRNA است. <strong>یوکاریوت‌ها (ریبوزوم 80S):</strong> فاکتور <strong>eIF4E</strong> به کلاهک '۵ (Cap) متصل می‌شود و <strong>eIF3</strong> زیرواحدهای ریبوزوم را جدا نگه می‌دارد.</p>"
+          "title": "شروع ترجمه و توالی Shine-Dalgarno",
+          "html": "<p><strong>پروکاریوت‌ها:</strong> انتهای '۳ مولکول <strong>16S rRNA</strong> مکمل توالی <strong>Shine-Dalgarno</strong> در انتهای '۵ مولکول mRNA است.</p>"
         },
         {
           "row": 4,
           "title": "مرحله طویل‌سازی (Elongation) و جابه‌جایی tRNA",
-          "html": "<p>ترتیب حرکت tRNA در جایگاه‌های ریبوزوم به صورت <strong>A site ← P site ← E site</strong> است. فاکتور <strong>EF-Tu (eEF1)</strong> آمینواسیل-tRNA را وارد جایگاه A می‌کند و <strong>EF-G (eEF2)</strong> مسئول جابه‌جایی (Translocation) ریبوزوم است. فعالیت پپتیدیل ترانسفراز بر عهده <strong>23S rRNA</strong> (در پروکاریوت) و <strong>28S rRNA</strong> (در یوکاریوت) است (یک ریبوزیم).</p>"
+          "html": "<p>ترتیب حرکت tRNA در جایگاه‌های ریبوزوم به صورت <strong>A site ← P site ← E site</strong> است. فعالیت پپتیدیل ترانسفراز بر عهده 23S rRNA (پروکاریوت) و 28S rRNA (یوکاریوت) است.</p>"
         },
         {
           "row": 5,
           "title": "داروها و سموم مهارکننده سنتز پروتئین",
-          "html": "\n            <table class=\"w-full text-xs sm:text-sm border-collapse border border-slate-200 dark:border-slate-700\">\n              <thead><tr class=\"bg-slate-100 dark:bg-slate-800\"><th class=\"border p-2\">دارو / سم</th><th class=\"border p-2\">هدف</th><th class=\"border p-2\">نتیجه مهار</th></tr></thead>\n              <tbody>\n                <tr><td class=\"border p-2 font-bold\">اریترومایسین</td><td class=\"border p-2\">زیرواحد 50S پروکاریوت</td><td class=\"border p-2\">مهار جابه‌جایی (Translocation) ریبوزوم</td></tr>\n                <tr><td class=\"border p-2 font-bold\">کلرامفنیکل</td><td class=\"border p-2\">زیرواحد 50S پروکاریوت</td><td class=\"border p-2\">مهار آنزیم پپتیدیل ترانسفراز</td></tr>\n                <tr><td class=\"border p-2 font-bold\">تتراسایکلین</td><td class=\"border p-2\">زیرواحد 30S پروکاریوت</td><td class=\"border p-2\">ممانعت از اتصال آمینواسیل-tRNA به جایگاه A</td></tr>\n                <tr><td class=\"border p-2 font-bold\">پورومایسین</td><td class=\"border p-2\">پروکاریوت و یوکاریوت</td><td class=\"border p-2\">آنالوگ آمینواسیل-tRNA و خاتمه زودرس زنجیره</td></tr>\n                <tr><td class=\"border p-2 font-bold\">سیکلوهگزیمید</td><td class=\"border p-2\">یوکاریوت (80S)</td><td class=\"border p-2\">مهار پپتیدیل ترانسفراز یوکاریوتی</td></tr>\n                <tr><td class=\"border p-2 font-bold\">سم دیفتری</td><td class=\"border p-2\">یوکاریوت (eEF-2)</td><td class=\"border p-2\">ADP-ریبوزیلاسیون و مهار eEF-2</td></tr>\n                <tr><td class=\"border p-2 font-bold\">ریفامپیسین</td><td class=\"border p-2\">RNA پلیمراز باکتری و میتوکندری</td><td class=\"border p-2\">مهار رونویسی باکتریایی و میتوکندریایی</td></tr>\n              </tbody>\n            </table>\n          "
+          "html": "<p><strong>اریترومایسین:</strong> 50S پروکاریوت (مهار جابه‌جایی) | <strong>کلرامفنیکل:</strong> 50S پروکاریوت (مهار پپتیدیل ترانسفراز) | <strong>تتراسایکلین:</strong> 30S پروکاریوت (ممانعت از ورود به جایگاه A) | <strong>پورومایسین:</strong> پروکاریوت و یوکاریوت (خاتمه زودرس) | <strong>سیکلوهگزیمید:</strong> یوکاریوت 80S | <strong>سم دیفتری:</strong> مهار eEF-2 یوکاریوت | <strong>ریفامپیسین:</strong> مهار RNA پلیمراز باکتری و میتوکندری.</p>"
         },
         {
           "row": 6,
-          "title": "تغییرات پس از ترجمه (هیدروکسی‌پرولین)",
-          "html": "<p><strong>هیدروکسی‌پرولین</strong> و هیدروکسی‌لیزین کدون مستقیم در mRNA ندارند و پس از ترجمه در ساختار کلاژن ساخته می‌شوند. همچنین <strong>سیترولین</strong> فاقد کدون در mRNA است.</p>"
+          "title": "تغییرات پس از ترجمه (هیدروکسی‌پرولین و C-peptide)",
+          "html": "<p><strong>هیدروکسی‌پرولین:</strong> نتیجه تغییرات پس از ترجمه در کلاژن. <strong>سیترولین:</strong> بدون کدون در mRNA. <strong>C-peptide:</strong> برای تشخیص انسولین درون‌زاد از تزریقی استفاده می‌شود.</p>"
         }
       ],
       "questions": [
@@ -317,7 +342,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             6
           ],
-          "exp": "هیدروکسی‌پرولین نتیجه هیدروکسیلاسیون پس از ترجمه پرولین در کلاژن است و به پایداری مارپیچ سه‌گانه کمک می‌کند."
+          "exp": "هیدروکسی‌پرولین نتیجه هیدروکسیلاسیون پس از ترجمه پرولین در کلاژن است."
         },
         {
           "uid": "ch10_t3_q2",
@@ -333,7 +358,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             1
           ],
-          "exp": "کدون UGA به طور معمول توقف است اما در ترجمه سلنوسیستئین توسط tRNASec شناسایی شده و این اسید آمینه وارد پروتئین می‌شود."
+          "exp": "کدون UGA در ترجمه سلنوسیستئین توسط tRNA خاصی شناسایی شده و این اسید آمینه وارد پروتئین می‌شود."
         },
         {
           "uid": "ch10_t3_q3",
@@ -349,7 +374,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             5
           ],
-          "exp": "ریفامپیسین مهارکننده RNA پلیمراز باکتریایی و میتوکندریایی است و رونویسی در میتوکندری را متوقف می‌کند."
+          "exp": "ریفامپیسین مهارکننده RNA پلیمراز باکتریایی و میتوکندریایی است."
         },
         {
           "uid": "ch10_t3_q4",
@@ -391,22 +416,42 @@ window.BIOCHEM_DB[10] = {
         {
           "row": 1,
           "title": "تفاوت جهش Transition و Transversion",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>Transition:</strong> تعویض یک باز پورین با پورین دیگر (A↔G) یا یک باز پیریمیدین با پیریمیدین دیگر (C↔T).</li><li><strong>Transversion:</strong> تعویض یک باز پورین با پیریمیدین یا بالعکس (G↔T, G↔C, A↔T, A↔C).</li></ul>"
+          "html": "<p><strong>Transition:</strong> تعویض پورین با پورین (A↔G) یا پیریمیدین با پیریمیدین (C↔T) | <strong>Transversion:</strong> تعویض پورین با پیریمیدین یا بالعکس.</p>"
         },
         {
           "row": 2,
           "title": "انواع جهش‌های نقطه‌ای و چارچوب خوانش",
-          "html": "<ul class='list-disc pr-5 space-y-1'><li><strong>Silent (خاموش):</strong> تغییر در باز سوم کدون بدون تغییر در نوع اسید آمینه.</li><li><strong>Missense (بدمعنی):</strong> تغییر یک باز و جایگزینی اسید آمینه متفاوت (مانند کم‌خونی داسی‌شکل: جایگزینی والین به جای گلوتامات).</li><li><strong>Nonsense (بی‌معنی):</strong> تبدیل کدون اسید آمینه به کدون توقف (UAA, UAG, UGA) و خاتمه زودرس پروتئین.</li><li><strong>Frameshift (تغییر چارچوب):</strong> حذف یا اضافه شدن نوکلئوتید (غیرمضرب ۳).</li></ul>"
+          "html": "<p><strong>Silent:</strong> بدون تغییر اسید آمینه | <strong>Missense:</strong> تغییر اسید آمینه (مثل Sickle Cell Anemia) | <strong>Nonsense:</strong> ایجاد کدون توقف | <strong>Frameshift:</strong> حذف یا اضافه شدن نوکلئوتید.</p>"
         },
         {
           "row": 3,
-          "title": "سیستم‌های ترمیم DNA و آنزیم‌های کلیدی",
-          "html": "\n            <table class=\"w-full text-xs sm:text-sm border-collapse border border-slate-200 dark:border-slate-700\">\n              <thead><tr class=\"bg-slate-100 dark:bg-slate-800\"><th class=\"border p-2\">نوع ترمیم</th><th class=\"border p-2\">آنزیم کلیدی</th><th class=\"border p-2\">کاربرد و بیماری مرتبط</th></tr></thead>\n              <tbody>\n                <tr><td class=\"border p-2 font-bold\">Mismatch Repair (MMR)</td><td class=\"border p-2\">پروتئین‌های MutS / MSH</td><td class=\"border p-2\">اصلاح جفت‌بازهای ناجور حین همانندسازی (نقص ← سندرم لینچ)</td></tr>\n                <tr><td class=\"border p-2 font-bold\">Base Excision Repair (BER)</td><td class=\"border p-2\">گلیکوزیلاز و DNA پلیمراز بتا (β)</td><td class=\"border p-2\">حذف تک‌بازهای آسیب‌دیده مثل دآمیناسیون</td></tr>\n                <tr><td class=\"border p-2 font-bold\">Nucleotide Excision Repair (NER)</td><td class=\"border p-2\">اندونوکلئازهای اختصاصی</td><td class=\"border p-2\">حذف دیمرهای تیمین ناشی از UV (نقص ← گزودرما پیگمنتوزوم)</td></tr>\n              </tbody>\n            </table>\n            <p class=\"mt-2\"><strong>Proofreading:</strong> توانایی DNA پلیمراز برای تشخیص و حذف نوکلئوتید اشتباه با فعالیت <strong>اگزونوکلئازی '3 به '5</strong>.</p>\n          "
+          "title": "سیستم‌های ترمیم DNA و آنزیم‌های مرتبط",
+          "html": "<p><strong>Mismatch Repair (MMR):</strong> اصلاح جفت‌بازهای ناجور حین همانندسازی | <strong>Base Excision Repair (BER):</strong> حذف بازهای آسیب‌دیده (گلیکوزیلاز و DNA پلیمراز بتا) | <strong>Nucleotide Excision Repair (NER):</strong> حذف دیمرهای ناشی از UV (نقص ← گزودرما پیگمنتوزوم). <strong>Proofreading:</strong> فعالیت اگزونوکلئازی '3 به '5.</p>"
+        },
+        {
+          "row": 4,
+          "title": "تأثیر جهش بر اگزون، اینترون و پروموتر و نقش p53",
+          "html": "<p>جهش در <strong>Exon</strong> ساختمان پروتئین را تغییر می‌دهد اما جهش در Promoter و Enhancer فقط میزان بیان ژن را تغییر می‌دهد. ویروس <strong>HPV</strong> با تخریب پروتئین سرکوبگر تومور <strong>p53</strong> منجر به سرطان دهانه رحم می‌شود.</p>"
+        },
+        {
+          "row": 5,
+          "title": "چرخه سلولی و فازهای آن",
+          "html": "<p><strong>G1:</strong> رشد و آماده‌سازی | <strong>S:</strong> همانندسازی DNA | <strong>G2:</strong> آماده‌سازی برای تقسیم | <strong>M:</strong> تقسیم سلولی (میتوز).</p>"
         },
         {
           "row": 6,
           "title": "بیماری فیبروز سیستیک (CF)",
-          "html": "<p>بیماری اتوزومال مغلوب ناشی از جهش در ژن کانال کلریدی <strong>CFTR</strong> غشای سلول‌های اپی‌تلیال (شایع‌ترین جهش: حذف فنیل‌آلانین در موقعیت ۵۰۸ یا ΔF508) که انتقال یون کلر و بی‌کربنات را مختل می‌کند.</p>"
+          "html": "<p>ناشی از نقص در کانال کلریدی <strong>CFTR</strong> غشای سلولی که انتقال کلر و بی‌کربنات را مختل می‌کند.</p>"
+        },
+        {
+          "row": 7,
+          "title": "تأثیر پرتوهای ماوراءبنفش (UV)",
+          "html": "<p>پرتو UV باعث ایجاد <strong>دیمرهای پیریمیدینی (تیمین-تیمین دیمر)</strong> در DNA می‌شود که همانندسازی را مختل می‌کند.</p>"
+        },
+        {
+          "row": 8,
+          "title": "جدول جمع‌بندی انواع جهش‌ها و تأثیرات آن‌ها",
+          "html": "<p>Silent (بدون تغییر) ← Missense (تغییر آمینواسید) ← Nonsense (کدون توقف) ← Frameshift (تغییر چارچوب خوانش).</p>"
         }
       ],
       "questions": [
@@ -424,7 +469,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             3
           ],
-          "exp": "فعالیت اگزونوکلئازی '3 به '5 به DNA پلیمراز اجازه می‌دهد نوکلئوتید نادرست اضافه‌شده به انتهای '3 را حذف و اصلاح کند."
+          "exp": "فعالیت اگزونوکلئازی '3 به '5 به DNA پلیمراز اجازه می‌دهد نوکلئوتید نادرست اضافه‌شده را حذف و اصلاح کند."
         },
         {
           "uid": "ch10_t4_q2",
@@ -440,7 +485,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             3
           ],
-          "exp": "خطاهای جفت شدن بازها حین همانندسازی توسط سیستم ترمیم عدم تطابق (Mismatch Repair) شناسایی و اصلاح می‌شوند."
+          "exp": "خطاهای جفت شدن بازها حین همانندسازی توسط سیستم ترمیم عدم تطابق (Mismatch Repair) اصلاح می‌شوند."
         },
         {
           "uid": "ch10_t4_q3",
@@ -456,7 +501,7 @@ window.BIOCHEM_DB[10] = {
           "rows": [
             6
           ],
-          "exp": "فیبروز سیستیک ناشی از جهش در کانال کلریدی CFTR است که موجب غلیظ شدن ترشحات ریه و پانکراس می‌شود."
+          "exp": "فیبروز سیستیک ناشی از جهش در کانال کلریدی CFTR است."
         }
       ]
     }
