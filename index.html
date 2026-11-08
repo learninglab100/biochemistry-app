@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>آزمون‌یار جامع بیوشیمی بالینی و علوم پایه</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+  <style>
+    body { font-family: 'Vazirmatn', sans-serif; }
+    .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .dark .custom-scroll::-webkit-scrollbar-thumb { background: #475569; }
+    .formula-box { direction: ltr; unicode-bidi: embed; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              900: '#134e4a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3 cursor-pointer" onclick="app.goHome()">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 text-white flex items-center justify-center font-bold text-lg shadow-md">
+          🧬
+        </div>
+        <div>
+          <h1 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">بانک جامع بیوشیمی</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400">درسنامه طبقه‌بندی‌شده + آزمون‌های تشریحی</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="app.openBookmarks()" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-800 flex items-center gap-1.5">
+          <span>★</span>
+          <span class="hidden sm:inline">نشان‌شده‌ها</span>
+          <span id="bookmark-count" class="bg-amber-200 dark:bg-amber-800 px-1.5 py-0.5 rounded-full text-xs">0</span>
+        </button>
+        <button onclick="app.openWrongBank()" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 dark:bg-rose-950/50 dark:text-rose-300 dark:border-rose-800 flex items-center gap-1.5">
+          <span>✕</span>
+          <span class="hidden sm:inline">مرور غلط‌ها</span>
+          <span id="wrong-count" class="bg-rose-200 dark:bg-rose-800 px-1.5 py-0.5 rounded-full text-xs">0</span>
+        </button>
+        <button onclick="app.toggleTheme()" title="تغییر تم" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+          🌓
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="app-root" class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
+    <!-- Dynamic Views Render Here -->
+  </main>
+
+  <!-- Lesson Row Reference Modal (Drawer/Popup) -->
+  <div id="lesson-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="px-5 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-teal-50/60 dark:bg-teal-950/30">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded-lg bg-teal-600 text-white text-xs font-bold" id="modal-row-badge">ردیف ۱</span>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base" id="modal-row-title">عنوان ردیف درسنامه</h3>
+        </div>
+        <button onclick="app.closeModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800">✕</button>
+      </div>
+      <div id="modal-row-body" class="p-5 overflow-y-auto custom-scroll text-sm leading-7 space-y-3 text-slate-700 dark:text-slate-200">
+      </div>
+      <div class="px-5 py-3 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex justify-end">
+        <button onclick="app.closeModal()" class="px-4 py-2 rounded-xl bg-slate-800 text-white dark:bg-slate-700 text-sm font-medium hover:opacity-90">بستن پنجره</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Chapter Data Registry & Modules -->
+  <script src="data/manifest.js"></script>
+  <script src="data/ch1.js"></script>
+  <script src="data/ch2.js"></script>
+  <script src="data/ch3.js"></script>
+  <script src="data/ch4.js"></script>
+  <script src="data/ch5.js"></script>
+  <script src="data/ch6.js"></script>
+  <script src="data/ch7.js"></script>
+  <script src="data/ch8.js"></script>
+  <script src="data/ch9.js"></script>
+  <script src="data/ch10.js"></script>
+  <script src="data/ch11.js"></script>
+  <script src="data/ch12.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
